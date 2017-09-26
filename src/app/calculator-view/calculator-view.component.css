@@ -1,0 +1,10 @@
+md-card {
+    max-width: 40%;
+    display: inline-block;
+    margin-top: 2%; 
+    margin-left: 5%;
+}
+
+md-input-container {
+    width: 100%; 
+}

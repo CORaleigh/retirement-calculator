@@ -1,0 +1,12 @@
+md-toolbar {
+    margin-top: 0;
+}
+
+img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+md-input-container {
+    width: 100%;
+}
