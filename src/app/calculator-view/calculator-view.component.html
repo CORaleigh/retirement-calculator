@@ -1,34 +1,36 @@
 <ng-container>
   
-  <md-card>
+  <mat-card>
 
-    <md-card-header>
-      <md-card-title><h3>Retirement Contributions</h3></md-card-title>
-    </md-card-header>
+    <mat-card-header>
+      <mat-card-title><h3>Retirement Contributions</h3></mat-card-title>
+    </mat-card-header>
   
-    <md-card-content class="md-padding" layout="row" layout-wrap>
+    <mat-card-content class="mat-padding" layout="row" layout-wrap>
   
-        <md-input-container>
-          <input [(ngModel)]="yearlySalary" name="yearly-salary" mdInput placeholder="Yearly Salary" type="number">
-        </md-input-container>
+        <mat-input-container>
+          <input [(ngModel)]="yearlySalary" name="yearly-salary" matInput placeholder="Yearly Salary" type="number">
+        </mat-input-container>
 
-        <md-input-container>
-          <input [(ngModel)]="contributionPercentage" name="contrib-percent" mdInput placeholder="Your Contribution Percentage" type="number">
-        </md-input-container>
+        <mat-input-container>
+          <input [(ngModel)]="contributionPercentage" name="contrib-percent" matInput placeholder="Your Contribution Percentage" type="number">
+        </mat-input-container>
 
+        <h4>Your Contribution: {{this.employeeContrib}}</h4>
+        <h4>City Contribution: {{this.cityContrib}}</h4>
         <h4>Total: {{this.total}}</h4>
   
-    </md-card-content>
+    </mat-card-content>
   
-    <md-card-actions>
+    <mat-card-actions>
 
       <div style="display:block">
-        <button md-button (click)="calculateContribution()">CALCULATE</button>
+        <button mat-button (click)="calculateContribution()">CALCULATE</button>
       </div>
       
-    </md-card-actions>
+    </mat-card-actions>
   
-  </md-card>
+  </mat-card>
   
   
 

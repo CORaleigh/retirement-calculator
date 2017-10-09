@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 // custom imports
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule, MdToolbarModule, MdCardModule, MdInputModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatCardModule, MatInputModule} from '@angular/material';
 
 // modules
 import { CalculatorViewComponent } from './calculator-view/calculator-view.component'; 
@@ -19,11 +19,11 @@ import { CalculatorViewComponent } from './calculator-view/calculator-view.compo
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdToolbarModule,
-    MdCheckboxModule,
-    MdCardModule,
-    MdInputModule,
+    MatButtonModule,
+    MatToolbarModule, 
+    MatCheckboxModule,
+    MatCardModule,
+    MatInputModule,
     FormsModule
   ],
   providers: [],

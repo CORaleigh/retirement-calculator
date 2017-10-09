@@ -10,7 +10,9 @@ export class CalculatorViewComponent implements OnInit {
   yearlySalary: number; 
   contributionPercentage: number; 
   cityMatchPercentage: number; 
-  total: number; 
+  employeeContrib: number;
+  cityContrib: number; 
+  total: any; 
 
   constructor() { }
 
@@ -20,10 +22,10 @@ export class CalculatorViewComponent implements OnInit {
   calculateContribution() {
     this.contributionPercentage < 1.5 ? this.cityMatchPercentage = this.contributionPercentage : this.cityMatchPercentage = 1.5; 
     
-    let employeeContrib: number = this.yearlySalary * (this.contributionPercentage / 100); 
-    let cityContrib: number = this.yearlySalary * (this.cityMatchPercentage / 100); 
+    this.employeeContrib = this.yearlySalary * (this.contributionPercentage / 100); 
+    this.cityContrib = this.yearlySalary * (this.cityMatchPercentage / 100); 
 
-    this.total = employeeContrib + cityContrib; 
+    this.total = '$' + (this.employeeContrib + this.cityContrib); 
   }
 
 }

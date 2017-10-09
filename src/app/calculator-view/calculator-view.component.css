@@ -1,10 +1,10 @@
-md-card {
+mat-card {
     max-width: 40%;
     display: inline-block;
     margin-top: 2%; 
     margin-left: 5%;
 }
 
-md-input-container {
+mat-input-container {
     width: 100%; 
 }
