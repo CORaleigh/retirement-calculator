@@ -7,19 +7,55 @@
     </mat-card-header>
   
     <mat-card-content class="mat-padding" layout="row" layout-wrap>
-  
-        <mat-input-container>
-          <input [(ngModel)]="yearlySalary" name="yearly-salary" matInput placeholder="Yearly Salary" type="number">
-        </mat-input-container>
 
-        <mat-input-container>
-          <input [(ngModel)]="contributionPercentage" name="contrib-percent" matInput placeholder="Your Contribution Percentage" type="number">
-        </mat-input-container>
-
-        <h4>Your Contribution: {{this.employeeContrib}}</h4>
-        <h4>City Contribution: {{this.cityContrib}}</h4>
-        <h4>Total: {{this.total}}</h4>
+      <p><a href="https://corecon.raleighnc.gov/doc/cornerstones-457-contribution-worksheet" target="_blank">COR Allocation Worksheet</a></p>
+      <p><a href="https://www.bbt.com/investing/your-workplace-retirement-plan/default.page" target="_blank">BB&amp;T Allocation Tools</a></p>
   
+      <mat-input-container>
+        <input [(ngModel)]="yearlySalary" name="yearly-salary" matInput placeholder="Yearly Salary" type="number">
+      </mat-input-container>
+
+      <mat-input-container>
+        <input [(ngModel)]="contributionPercentage" name="contrib-percent" matInput placeholder="Your Contribution Percentage" type="number">
+      </mat-input-container>
+
+      <mat-list>
+
+        <mat-list-item>
+          <h4>Your Contribution:</h4>
+          <p mat-line *ngIf="this.employeeContrib > 0">
+              {{this.employeeContrib | currency:'USD':true:'1.0-0'}}
+          </p>
+          <p *ngIf="this.employeeContrib == 0">
+            --
+          </p>
+        </mat-list-item>
+
+        <mat-list-item>
+          <h4>City Contribution:</h4>
+          <p mat-line *ngIf="this.cityContrib > 0">
+            {{this.cityContrib | currency:'USD':true:'1.0-0'}}
+          </p>
+          <p *ngIf="this.cityContrib == 0">
+            --
+          </p>
+        </mat-list-item>
+
+        <mat-list-item>
+          <h4>Total:</h4>
+          <p mat-line *ngIf="this.total > 0">
+            {{this.total | currency:'USD':true:'1.0-0'}}
+          </p>
+          <p *ngIf="this.total == 0">
+            --
+          </p>
+        </mat-list-item>
+
+
+
+
+      </mat-list>
+         
     </mat-card-content>
   
     <mat-card-actions>

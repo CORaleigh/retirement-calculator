@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorViewComponent implements OnInit {
 
-  yearlySalary: number; 
-  contributionPercentage: number; 
-  cityMatchPercentage: number; 
-  employeeContrib: number;
-  cityContrib: number; 
-  total: any; 
+  yearlySalary: number = 0; 
+  contributionPercentage: number = 0; 
+  cityMatchPercentage: number = 0; 
+  employeeContrib: number = 0;
+  cityContrib: number = 0; 
+  total: any = 0; 
 
   constructor() { }
 
@@ -25,7 +25,7 @@ export class CalculatorViewComponent implements OnInit {
     this.employeeContrib = this.yearlySalary * (this.contributionPercentage / 100); 
     this.cityContrib = this.yearlySalary * (this.cityMatchPercentage / 100); 
 
-    this.total = '$' + (this.employeeContrib + this.cityContrib); 
+    this.total = this.employeeContrib + this.cityContrib; 
   }
 
 }
